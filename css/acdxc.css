@@ -1,0 +1,653 @@
+/*redimensionnement du lecteur audiojs*/
+.audiojs {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  /*background: #b78e00;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b78e00), color-stop(0.5, #d2b860), color-stop(0.51, #b78e00), color-stop(1, #b78e00));
+  background-image: -moz-linear-gradient(center top, #b78e00 0%, #d2b860 50%, #b78e00 51%, #b78e00 100%);*/
+}
+@media (min-width: 405px) { .audiojs { width: 220px; } }
+@media (min-width: 465px) { .audiojs { width: 240px; } }
+@media (min-width: 515px) { .audiojs { width: 290px; } }
+
+@media (min-width: 565px) { .audiojs { width: 340px; } }
+@media (min-width: 605px) { .audiojs { width: 370px; } }
+@media (min-width: 650px) { .audiojs { width: 430px; } }
+@media (min-width: 730px) { .audiojs { width: 510px; } }
+
+@media (min-width: 768px) { .audiojs { width: 560px; } }
+@media (min-width: 992px) { .audiojs { width: 210px; } }
+@media (min-width: 1200px) { .audiojs { width: 410px; } }
+
+.audiojs .scrubber {
+  width: 0px;
+  margin: 0px;
+  /*background: #707410;*/
+  overflow: hidden;
+}
+@media (min-width: 405px) { .audiojs .scrubber { width: 60px; margin: 10px; overflow: visible;} }
+@media (min-width: 465px) { .audiojs .scrubber { width: 80px; } }
+@media (min-width: 515px) { .audiojs .scrubber { width: 130px; } }
+
+@media (min-width: 565px) { .audiojs .scrubber { width: 180px; } }
+@media (min-width: 605px) { .audiojs .scrubber { width: 210px; } }
+@media (min-width: 650px) { .audiojs .scrubber { width: 270px; } }
+@media (min-width: 730px) { .audiojs .scrubber { width: 350px; } }
+
+@media (min-width: 768px) { .audiojs .scrubber { width: 390px; } }
+@media (min-width: 992px) { .audiojs .scrubber { width: 40px; } }
+@media (min-width: 1200px) { .audiojs .scrubber { width: 240px; } }
+
+.audiojs .play-pause {
+  /*width: 25px;*/
+  padding: 6px 0px;
+}
+.time{
+  cursor: pointer;
+}
+.progress{
+  cursor: pointer;
+}
+.loaded{
+  cursor: pointer;
+}
+#playerText{
+  position: absolute;
+  top: 14px;
+  left: 5px;
+  z-index: 2;
+  font-size: xx-small;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  line-height: 12px;
+}
+
+
+/* facebook frame *******/
+.fb-frame {
+  width: 100%;
+  height: 80px;
+}
+@media (min-width: 430px) { .fb-frame { height: 100px; } }
+@media (min-width: 465px) { .fb-frame { height: 120px; } }
+
+@media (min-width: 565px) { .fb-frame { height: 150px; } }
+@media (min-width: 670px) { .fb-frame { height: 180px; } }
+@media (min-width: 730px) { .fb-frame { height: 200px; } }
+
+@media (min-width: 768px) { .fb-frame { height: 211px; } }
+@media (min-width: 992px) {  .fb-frame { height: 256px; }  }
+@media (min-width: 1200px) { .fb-frame { height: 315px; } }
+
+/* youtube frame *******/
+.yt-frame {
+  width: 100%;
+  height: 80px;
+}
+@media (min-width: 430px) { .yt-frame { height: 100px; } }
+@media (min-width: 465px) { .yt-frame { height: 120px; } }
+
+@media (min-width: 565px) { .yt-frame { height: 150px; } }
+@media (min-width: 670px) { .yt-frame { height: 180px; } }
+@media (min-width: 730px) { .yt-frame { height: 200px; } }
+
+@media (min-width: 768px) { .yt-frame { height: 211px; } }
+@media (min-width: 992px) {  .yt-frame { height: 256px; }  }
+@media (min-width: 1200px) { .yt-frame { height: 315px; } }
+
+
+/* carousel *******/
+.carousel {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-inner {
+  /*width: 100%;*/
+  height: 100px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel .item img{
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-indicators {
+    bottom: -20px;
+}
+.logo-btn-carousel {
+  width: 50px;
+
+}
+@media (min-width: 768px) {
+  .logo-btn-carousel {
+    width: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .logo-btn-carousel {
+    width: 120px;
+  }
+}
+.chevron-btn-carousel{
+  position:relative;
+  top:-16px;
+}
+@media (min-width: 768px) {
+  .chevron-btn-carousel {
+    top:-30px;
+  }
+}
+@media (min-width: 1200px) {
+  .chevron-btn-carousel {
+    top:-45px;
+  }
+}
+
+
+/* modal Player *******/
+.modal-content{
+  background-color: black;
+  opacity: 0.9;
+}
+.close {
+  color: white;
+  opacity: 1;
+}
+.playerList {
+  text-align: left;
+  list-style:none;
+  /*list-style: decimal-leading-zero inside;*/
+  border-top: 1px solid #ccc;
+  font-size: 0.9em;
+}
+.playerList > li {
+  position: relative;
+  padding: 9px 2px 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.playerList > li > a {
+  overflow:hidden;
+  height:20px;
+  display: block;
+}
+li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
+li.playing a { color: #9a9a9a; }
+li.playing:before {
+  content: '♬';
+  width: 14px;
+  height: 14px;
+  padding: 3px;
+  line-height: 14px;
+  margin: 0px;
+  position: absolute;
+  left: -24px;
+  top: 9px;
+  /*color: #000; */
+  font-size: 13px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.playerListDownload {
+  text-align:center;
+  list-style: none;
+  padding-left: 0px;
+}
+.playerListDownload > li {
+  cursor: default;
+}
+
+#qualitySelector {
+  height: 38px;
+  width: 40px;
+  display: inline-block;
+  overflow: hidden;
+  display: none;
+}
+@media (min-width: 465px) { #qualitySelector { display: inline-block; } }
+
+input[type="radio"]{
+	-webkit-appearance:	none;
+	-moz-appearance:	none;
+	-o-appearance:		none;
+	appearance:		none;
+}
+input[type="radio"]:checked + .qualityItem{
+  outline: none;
+  color: black;
+  background-color: #42DCA3;
+}
+.radio {
+  margin: 0px;
+}
+.radio label{
+  padding: 0px;
+}
+.qualityItem {
+  margin: 0px;
+  padding: 0px;
+
+  height: 18px;
+  width: 40px;
+}
+
+/*
+* effet light
+* fait avec hyperspace http://codepen.io/noahblon/pen/GKflw
+* ===>>> TOO MUCH processor using, to reactivate uncomment <div class="lightWrapper"> and <div class="scene"> in index.html
+* ===>>> and all the following comments
+*/
+/*.wall{
+  background: url(../img/acdxc-logo.png);
+  background-size: cover;
+}*/
+/* Wrapper for the light effect */
+/*.lightWrapper{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: inline-block;
+}
+@media (min-width: 992px) { .lightWrapper { display: inline;} }*/
+
+/* No correct solution for firefox */
+/*@-moz-document url-prefix() {
+  .scene {
+    display: none;
+  }
+}*/
+
+/*.scene{
+  display: inline-block;
+  vertical-align: middle;
+  perspective: 5px;
+  perspective-origin: 50% 50%;
+  position: relative;
+}
+
+.wrap{
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  top: -500px;
+
+  transform-style: preserve-3d;
+  animation: move 12s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+.wrap:nth-child(2){
+  animation: move 12s infinite linear;
+  animation-delay: 6s;
+}
+
+.wall {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  animation: fade 12s infinite linear;
+  animation-delay: 0;
+}
+
+.wrap:nth-child(2) .wall {
+  animation-delay: 6s;
+}
+
+.wall-right {
+  transform: rotateY(90deg) translateZ(500px);
+}
+
+.wall-left {
+  transform: rotateY(-90deg) translateZ(500px);
+}
+
+.wall-top {
+  transform: rotateX(90deg) translateZ(500px);
+}
+
+.wall-bottom {
+  transform: rotateX(-90deg) translateZ(500px);
+}
+
+.wall-back {
+  transform: rotateX(180deg) translateZ(500px);
+}
+
+@keyframes move {
+  0%{
+    transform: translateZ(-500px) rotate(0deg);
+  }
+  100%{
+    transform: translateZ(500px) rotate(0deg);
+  }
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 0;
+  }
+}*/
+
+
+/*
+ * Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: black;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+p {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  p {
+    margin: 0 0 35px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}
+a {
+  color: #42DCA3;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #1d9b6c;
+}
+.light {
+  font-weight: 400;
+}
+.navbar-custom {
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+.navbar-custom .navbar-toggle {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:active {
+  outline: none;
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+}
+.navbar-custom .navbar-brand:focus {
+  outline: none;
+}
+.navbar-custom a {
+  color: white;
+}
+.navbar-custom .nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.navbar-custom .nav li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li.active {
+  outline: none;
+}
+.navbar-custom .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.navbar-custom .nav li.active a:hover {
+  color: white;
+}
+@media (min-width: 768px) {
+  .navbar-custom {
+    padding: 20px 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: transparent;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+.intro {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.intro .intro-body .brand-heading {
+  font-size: 40px;
+}
+.intro .intro-body .intro-text {
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .intro {
+    height: 100%;
+    /*padding: 0;*/
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
+}
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  padding: 7px 16px;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  font-size: 40px;
+  color: white;
+  background: transparent;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.btn-circle:hover,
+.btn-circle:focus {
+  outline: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+.btn-circle i.animated {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+}
+.btn-circle:hover i.animated {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-moz-keyframes pulse {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.content-section {
+  padding-top: 100px;
+}
+.download-section {
+  width: 100%;
+  padding: 50px 0;
+  color: white;
+  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+@media (min-width: 767px) {
+  .content-section {
+    padding-top: 250px;
+  }
+  .download-section {
+    padding: 100px 0;
+  }
+}
+.btn {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+}
+.btn-default {
+  border: 1px solid #42DCA3;
+  color: #42DCA3;
+  background-color: transparent;
+}
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid #42DCA3;
+  outline: none;
+  color: black;
+  background-color: #42DCA3;
+}
+ul.banner-social-buttons {
+  margin-top: 0;
+}
+@media (max-width: 1199px) {
+  ul.banner-social-buttons {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  ul.banner-social-buttons li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.banner-social-buttons li:last-child {
+    margin-bottom: 0;
+  }
+}
+footer {
+  padding: 50px 0;
+}
+footer p {
+  margin: 0;
+}
+::-moz-selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+}
+::selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
