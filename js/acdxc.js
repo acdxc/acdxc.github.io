@@ -1,8 +1,13 @@
 
 $(function() {
+
   //wav by default
-  $('.mp3').css('visibility', 'hidden');
-  $('.mp3').css('display', 'none');
+  // $('.mp3').css('visibility', 'hidden');
+  // $('.mp3').css('display', 'none');
+
+  //mp3 by default
+  $('.wav').css('visibility', 'hidden');
+  $('.wav').css('display', 'none');
 
   //taille des fichiers affichés dans la playerListDownload
   $( '.playerListDownload li').each(function( index ) {
@@ -17,12 +22,12 @@ $(function() {
     //on injecte au même moment le qualitySelector et le container du player dans la div mainPlayer
     $('#mainPlayer').append('<div id="qualitySelector" >\
                                 <div class="radio">\
-                                  <label><input type="radio" name="qualityName" value="wav" checked>\
-                                    <div class="btn btn-default btn-xs qualityItem">WAV</div>\
+                                  <label><input type="radio" name="qualityName" value="wav" disabled>\
+                                    <div class="btn btn-default btn-xs qualityItem" style="visibility:hidden;">WAV</div>\
                                   </label>\
                                 </div>\
                                 <div class="radio">\
-                                  <label class=""><input type="radio" name="qualityName" value="mp3">\
+                                  <label class=""><input type="radio" name="qualityName" value="mp3" checked>\
                                     <div class="btn btn-default btn-xs qualityItem">MP3</div>\
                                   </label>\
                                 </div>\
