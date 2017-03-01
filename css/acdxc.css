@@ -565,6 +565,9 @@ a:focus {
     transform: scale(1);
   }
 }
+.content-video {
+  padding-top: 100px;
+}
 .content-section {
   padding-top: 100px;
 }
