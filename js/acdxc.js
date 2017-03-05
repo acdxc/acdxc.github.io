@@ -1,17 +1,18 @@
 
 $(function() {
 
-  //wav by default
-  // $('.mp3').css('visibility', 'hidden');
-  // $('.mp3').css('display', 'none');
-
-  //mp3 by default
+  /*** initialisation du MUSIC PLAYER : format AAC Visible au départ***/
+  // $('.aac').css('visibility', 'hidden');
   $('.wav').css('visibility', 'hidden');
-  $('.wav').css('display', 'none');
+  $('.mp3').css('visibility', 'hidden');
 
-  //taille des fichiers affichés dans la playerListDownload
-  $( '.playerListDownload li').each(function( index ) {
-    //a voir si le faire à la main pour optimiser les requetes
+  // $('.aac').css('display', 'none');
+  $('.wav').css('display', 'none');
+  $('.mp3').css('display', 'none');
+
+  //taille des fichiers affichés dans la playerListDownload seulement pour fichiers locaux (wav et mp3)
+  // $( '.playerListDownload.wav li, .playerListDownload.mp3 li').each(function( index ) { //=> WAV desactivé
+  $( '.playerListDownload.mp3 li').each(function( index ) {
     get_filesize(this, $('a', this).attr('href'), function(size, element) {
       $('a', element).html('<i class="fa fa-download" aria-hidden="true"></i> ' + formatSizeUnits(size));
     });
@@ -19,15 +20,20 @@ $(function() {
 
   audiojs.events.ready(function() {
 
-    //on injecte au même moment le qualitySelector et le container du player dans la div mainPlayer
+    //on injecte au même moment le qualitySelector et le container du player dans la div mainPlayer //=> WAV desactivé
     $('#mainPlayer').append('<div id="qualitySelector" >\
                                 <div class="radio">\
-                                  <label><input type="radio" name="qualityName" value="wav" disabled>\
-                                    <div class="btn btn-default btn-xs qualityItem" style="visibility:hidden;">WAV</div>\
+                                  <label><input type="radio" name="qualityName" value="aac" checked>\
+                                    <div class="btn btn-default btn-xs qualityItem">AAC</div>\
                                   </label>\
                                 </div>\
+                                <!-- <div class="radio">\
+                                  <label><input type="radio" name="qualityName" value="wav">\
+                                    <div class="btn btn-default btn-xs qualityItem">WAV</div>\
+                                  </label>\
+                                </div> -->\
                                 <div class="radio">\
-                                  <label class=""><input type="radio" name="qualityName" value="mp3" checked>\
+                                  <label class=""><input type="radio" name="qualityName" value="mp3">\
                                     <div class="btn btn-default btn-xs qualityItem">MP3</div>\
                                   </label>\
                                 </div>\
@@ -36,37 +42,34 @@ $(function() {
 
     //comportement du qualitySelector
     $('input[name=qualityName]').on('change', function() {
-      // mp3 selectionné
-      if($('input[name=qualityName]:checked').val()==='mp3'){
-        //affichage des listes
-        $('.mp3').css('visibility', 'visible');
-        $('.wav').css('visibility', 'hidden');
 
-        $('.mp3').css('display', 'block');
-        $('.wav').css('display', 'none');
+      $('.aac').css('visibility', 'hidden');
+      $('.wav').css('visibility', 'hidden');
+      $('.wav').css('visibility', 'hidden');
 
-        //on recupère les correspondants par les index des listes
-        if(audio.source.currentSrc!==""){
-          var currentIndex = $('li.playing').index('.playerList.wav .playerElem');
+      $('.aac').css('display', 'none');
+      $('.wav').css('display', 'none');
+      $('.mp3').css('display', 'none');
+
+      var qualityName = $('input[name=qualityName]:checked').val();
+
+      $('.' + qualityName).css('visibility', 'visible');
+      $('.' + qualityName).css('display', 'block');
+
+      var currentIndex; // merci => WAV desactivé
+      if(audio.source.currentSrc!==""){
+          switch (qualityName) {
+            case 'aac':
+              currentIndex = $('li.playing').index('.playerList.mp3 .playerElem');
+              break;
+            case 'mp3':
+              currentIndex = $('li.playing').index('.playerList.aac .playerElem');
+              break;
+            default:
+              currentIndex=0;
+          }
           $('.playerElem').removeClass('playing');
-          $('.playerList.mp3 .playerElem')[currentIndex].click();
-        }
-      }
-      // wav selectionné
-      if($('input[name=qualityName]:checked').val()==='wav'){
-        //affichage des listes
-        $('.wav').css('visibility', 'visible');
-        $('.mp3').css('visibility', 'hidden');
-
-        $('.wav').css('display', 'block');
-        $('.mp3').css('display', 'none');
-
-        //on recupère les correspondants par les index des listes
-        if(audio.source.currentSrc!==""){
-          var currentIndex = $('li.playing').index('.playerList.mp3 .playerElem');
-          $('.playerElem').removeClass('playing');
-          $('.playerList.wav .playerElem')[currentIndex].click();
-        }
+          $('.playerList.' + $('input[name=qualityName]:checked').val() + ' .playerElem')[currentIndex].click();
       }
     });
 
@@ -76,12 +79,13 @@ $(function() {
                     var next = $('.playerList.' + qualityName + ' li.playing').next();
                     if (!next.length) next = $('.playerList.' + qualityName + ' li').first();
                     var nextsong = $('a', next).attr('data-src');
+                    var songname = $('a', next).html();
                     next.addClass('playing').siblings().removeClass('playing');
-                    $('#playerText').html( ' playing ' + nextsong.substr(nextsong.lastIndexOf('/')+1));
+                    $('#playerText').html( ' playing ' + songname);
                     audio.load(nextsong);
                     audio.play();
 
-                    ga('send', 'event', 'Audio', 'play', nextsong.substr(nextsong.lastIndexOf('/')+1));
+                    ga('send', 'event', 'Audio', 'play', songname);
                 }
             });
 
@@ -156,14 +160,16 @@ $(function() {
     $('.playerList .playerElem').click(function(e) {
         e.preventDefault();
         var current = $('a', this).attr('data-src');
+        var songname = $('a', this).html();
 
         //si c'est la chanson en cours on fait playPause
-        if(audio.source.currentSrc === audio.source.baseURI + current){
-          audio.playPause();
+        if(audio.source.currentSrc === audio.source.baseURI + current
+                || audio.source.currentSrc === current){
+                    audio.playPause();
         } else {
 
           $(this).addClass('playing').siblings().removeClass('playing');
-          $('#playerText').html( ' playing ' + current.substr(current.lastIndexOf('/')+1));
+          $('#playerText').html( ' playing '  + songname ); //+ current.substr(current.lastIndexOf('/')+1));
 
           $('.time').css('font-size', '12px');
 
@@ -177,13 +183,13 @@ $(function() {
             audio.play();
           }
 
-          ga('send', 'event', 'Audio', 'play', current.substr(current.lastIndexOf('/')+1));
+          ga('send', 'event', 'Audio', 'play', songname);
         }
     });
 
     $('.playerListDownload a').click(function(e) {
-        var song = $(this).attr('href');
-        ga('send', 'event', 'Audio', 'download', song.substr(song.lastIndexOf('/')+1));
+        var song = $(this).attr('download');
+        ga('send', 'event', 'Audio', 'download', song);
     });
 
   });
