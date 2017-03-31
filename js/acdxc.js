@@ -1,14 +1,14 @@
 $(function() {
 
-  /*** initialisation de la liste du MUSIC PLAYER => AAC Visible ***/
+  /*** initialisation de la liste du MUSIC PLAYER => MP3 Visible ***/
 
-  // $('.aac').css('visibility', 'hidden');
+  $('.aac').css('visibility', 'hidden');
   $('.wav').css('visibility', 'hidden');
-  $('.mp3').css('visibility', 'hidden');
+  //$('.mp3').css('visibility', 'hidden');
 
-  // $('.aac').css('display', 'none');
+  $('.aac').css('display', 'none');
   $('.wav').css('display', 'none');
-  $('.mp3').css('display', 'none');
+  //$('.mp3').css('display', 'none');
 
   //comportement du qualitySelector
   $('input[name=qualityName]').on('change', function() {
