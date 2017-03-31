@@ -257,8 +257,8 @@
                                 Qualité :
 
                                 <div class="radio-inline">
-                                  <label><input type="radio" name="qualityName" value="aac" checked>
-                                    <div class="btn btn-default btn-xs qualityItem">AAC</div>
+                                  <label><input type="radio" name="qualityName" value="mp3" checked>
+                                    <div class="btn btn-default btn-xs qualityItem">MP3</div>
                                   </label>
                                 </div>
                                 <div class="radio-inline">
@@ -267,37 +267,77 @@
                                   </label>
                                 </div>
                                 <div class="radio-inline">
-                                  <label class=""><input type="radio" name="qualityName" value="mp3">
-                                    <div class="btn btn-default btn-xs qualityItem">MP3</div>
+                                  <label><input type="radio" name="qualityName" value="aac" >
+                                    <div class="btn btn-default btn-xs qualityItem">AAC</div>
                                   </label>
                                 </div>
+
                               </div>
                             </div>
                             <div class="row" >
                               <!-- List songs name -->
                               <div class="col-xs-10" style="padding:0px">
-                                <!-- List aac -->
+                                <!-- List mp3 on jamendo-->
+                                <ol class="playerList mp3">
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-mp32s">Moncieu_le_Sous_Peurfet.mp3</a></li>
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-mp32s">Lyly.mp3</a></li>
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-mp32s">Ma_Ville.mp3</a></li>
+                                </ol>
+                                <!-- List wav on fanburst-->
+                                <ol class="playerList wav">
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-wav" >Moncieu_le_Sous_Peurfet.wav</a></li>
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-wav" >Lyly.wav</a></li>
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-wav" >Ma_Ville.wav</a></li>
+                                </ol>
+                                <!-- List aac on jwplayer-->
                                 <ol class="playerList aac">
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-aac" >Moncieu_le_Sous_Peurfet.aac</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-aac" >Lyly.aac</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-aac" >Ma_Ville.aac</a></li>
                                 </ol>
-                                <!-- List wav -->
-                                <ol class="playerList wav">
-                                  <li><a class="playerElem" href="#" data-src="https://fanburst.com/ac-dxc/moncieu_le_sous_peurfet-341mo/download" >Moncieu_le_Sous_Peurfet.wav</a></li>
-                                  <li><a class="playerElem" href="#" data-src="https://fanburst.com/ac-dxc/lyly-2/download" >Lyly.wav</a></li>
-                                  <li><a class="playerElem" href="#" data-src="https://fanburst.com/ac-dxc/ma_ville/download" >Ma_Ville.wav</a></li>
-                                </ol>
-                                <!-- List mp3 -->
-                                <ol class="playerList mp3">
+                                <!-- List mp3 on local server-->
+                                <!-- <ol class="playerList mp3">
                                   <li><a class="playerElem" href="#" data-src="music/Moncieu_le_Sous_Peurfet.mp3">Moncieu_le_Sous_Peurfet.mp3</a></li>
                                   <li><a class="playerElem" href="#" data-src="music/Lyly.mp3">Lyly.mp3</a></li>
                                   <li><a class="playerElem" href="#" data-src="music/Ma_Ville.mp3">Ma_Ville.mp3</a></li>
-                                </ol>
+                                </ol> -->
                               </div>
                               <!-- List Download -->
                               <div class="col-xs-2" style="padding:0px">
-                                <!-- List aac -->
+                                <!-- List mp3 192kbps on jamendo-->
+                                <ul class="playerListDownload mp3">
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/peurfet-mp32"
+                                    download="Moncieu_le_Sous_Peurfet.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 5.2 Mo</a></li>
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/lyly-mp32"
+                                    download="Lyly.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 7 Mo</a></li>
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/maville-mp32"
+                                    download="Ma_Ville.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 6.8 Mo</a></li>
+                                  <li >Tous (zip)<a class="btn-default playerElemDownload" href="http://bit.ly/assezdexces-mp3"
+                                    download="acdxc-music-mp3.zip" ><i class="fa fa-download" aria-hidden="true"></i> 19 Mo</a></li>
+                                </ul>
+                                <!-- List mp3 96kbs on jamendo-->
+                                <!-- <ul class="playerListDownload mp3">
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/peurfet-mp3"
+                                    download="Moncieu_le_Sous_Peurfet.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 2.5 Mo</a></li>
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/lyly-mp3"
+                                    download="Lyly.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 3.2 Mo</a></li>
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/maville-mp3"
+                                    download="Ma_Ville.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 3.3 Mo</a></li>
+                                  <li >Tous (zip)<a class="btn-default playerElemDownload" href="http://bit.ly/assezdexces-mp3"
+                                    download="acdxc-music-mp3.zip" ><i class="fa fa-download" aria-hidden="true"></i> 19 Mo</a></li>
+                                </ul> -->
+                                <!-- List wav on fanburst -->
+                                <ul class="playerListDownload wav">
+                                  <li><a class="btn-default playerElemDownload" href="http://bit.ly/peurfet-wav"
+                                    download="Moncieu_le_Sous_Peurfet.wav" ><i class="fa fa-download" aria-hidden="true"></i> 35.8 Mo</a></li>
+                                  <li><a class="btn-default playerElemDownload" href="http://bit.ly/lyly-wav"
+                                    download="Lyly.wav" ><i class="fa fa-download" aria-hidden="true"></i> 47.1 Mo</a></li>
+                                  <li><a class="btn-default playerElemDownload" href="http://bit.ly/maville-wav"
+                                    download="Ma_Ville.wav" ><i class="fa fa-download" aria-hidden="true"></i> 48.5 Mo</a></li>
+                                  <li >Tous (zip)<a class="btn-default playerElemDownload" href="http://bit.ly/assezdexces-wav"
+                                    download="acdxc-music-wav.zip" ><i class="fa fa-download" aria-hidden="true"></i> 128 Mo</a></li>
+                                </ul>
+                                <!-- List aac on jwplayer-->
                                 <ul class="playerListDownload aac">
                                   <li><a class="btn-default playerElemDownload" href="http://bit.ly/peurfet-aac"
                                     download="Moncieu_le_Sous_Peurfet.aac" ><i class="fa fa-download" aria-hidden="true"></i> 2.9 Mo</a></li>
@@ -306,19 +346,8 @@
                                   <li><a class="btn-default playerElemDownload" href="http://bit.ly/maville-aac"
                                     download="Ma_Ville.aac" ><i class="fa fa-download" aria-hidden="true"></i> 3.9 Mo</a></li>
                                 </ul>
-                                <!-- List wav -->
-                                <ul class="playerListDownload wav">
-                                  <li><a class="btn-default playerElemDownload" href="https://fanburst.com/ac-dxc/moncieu_le_sous_peurfet-341mo/download"
-                                    download="Moncieu_le_Sous_Peurfet.wav" ><i class="fa fa-download" aria-hidden="true"></i> 34.1 Mo</a></li>
-                                  <li><a class="btn-default playerElemDownload" href="https://fanburst.com/ac-dxc/lyly-2/download"
-                                    download="Lyly.wav" ><i class="fa fa-download" aria-hidden="true"></i> 44.9 Mo</a></li>
-                                  <li><a class="btn-default playerElemDownload" href="https://fanburst.com/ac-dxc/ma_ville/download"
-                                    download="Ma_Ville.wav" ><i class="fa fa-download" aria-hidden="true"></i> 46.3 Mo</a></li>
-                                  <li >Tous (zip)<a class="btn-default playerElemDownload" href="https://fanburst.com/ac-dxc/album/assez-dexc%C3%A8s/download"
-                                    download="acdxc-music-wav.zip" ><i class="fa fa-download" aria-hidden="true"></i> 122 Mo</a></li>
-                                </ul>
-                                <!-- List mp3 -->
-                                <ul class="playerListDownload mp3">
+                                <!-- List mp3 on local server-->
+                                <!-- <ul class="playerListDownload mp3">
                                   <li ><a class="btn-default playerElemDownload" href="./music/Moncieu_le_Sous_Peurfet.mp3"
                                     download="Moncieu_le_Sous_Peurfet.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 3.3 Mo</a></li>
                                   <li ><a class="btn-default playerElemDownload" href="./music/Lyly.mp3"
@@ -327,7 +356,7 @@
                                     download="Ma_Ville.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 4.5 Mo</a></li>
                                   <li >Tous (zip)<a class="btn-default playerElemDownload" href="./music/acdxc-music-mp3.zip"
                                     download="acdxc-music-mp3.zip" ><i class="fa fa-download" aria-hidden="true"></i> 11.4 Mo</a></li>
-                                </ul>
+                                </ul> -->
                               </div>
                             </div>
                           </div>
