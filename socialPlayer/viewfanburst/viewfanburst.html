@@ -1,0 +1,94 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W37Q5HD');</script>
+<!-- End Google Tag Manager -->
+
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#fanburstModal">
+   Download Utilities
+</button>
+
+<div class="fullheight">
+  <iframe src="https://fanburst.com/ac-dxc/album/assez-dexcès/embed" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="fanburstModal" tabindex="-1" role="dialog" aria-labelledby="fanburstModal">
+  <div class="modal-dialog modal-lg thumbnail" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">FANBURST UTILITIES</h4>
+        <img ng-src="{{album[0].images.square_250}}">
+      </div>
+
+      <div class="modal-body" >
+
+        <div class="row" >
+          <div class="col-xs-8" style="padding:0px">
+          </div>
+          <div class="col-xs-2 colbordtop" style="padding:0px">
+            <div style="overflow:hidden">
+              <small>WAV</small>
+            </div>
+          </div>
+          <div class="col-xs-2 colbordtop" style="padding:0px">
+            <div style="overflow:hidden">
+              <small>MP3</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" >
+          <div class="col-xs-8" style="padding:0px">
+            <ul class="playerList" style="padding-left:0px">
+              <li ng-repeat="track in album">
+                <div>
+                  <img ng-src="{{track.images.square_150}}" width="20px"/>
+                  <a ng-href="{{track.url}}" target="_blank">{{track.title}}
+                    <i class="fa fa-external-link playerLink" aria-hidden="true"></i>
+                   </a>
+                 <div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-2" style="padding:0px">
+            <ul class="playerListDownload">
+              <li ng-repeat="track in album" class="colbord">
+                <a class="btn-default" ng-href= "{{track.url}}/download" >
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="colbord">Tous (zip)
+                <a class="btn-default" ng-href="https://fanburst.com/ac-dxc/album/assez-dexc%C3%A8s/download">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-2" style="padding:0px">
+            <ul class="playerListDownload">
+              <li ng-repeat="track in album" class="colbord">
+                <a class="btn-default" ng-href="{{track.url}}/download?p=2">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="colbord">Tous (zip)
+                <a class="btn-default" ng-href="">
+                  <!-- <i class="fa fa-download" aria-hidden="true"></i> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

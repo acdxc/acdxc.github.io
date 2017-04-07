@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="socialPlayer" lang="fr" xmlns:og="http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" href="http://acdxc.fr.nf/socialPlayer/" hreflang="fr" />
+    <link rel="alternate" href="http://www.acdxc.fr.nf/socialPlayer/" hreflang="fr" />
+    <meta name="google-site-verification" content="iqAaon8QavP80rk9e8oiZqyWRvHRUjMfYFtN1sWGnbo" />
+
+    <meta property="og:title" content="AC D'X'C --- SOCIAL PLAYERS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://acdxc.fr.nf/socialPlayer/" />
+    <meta property="og:image" content="http://acdxc.fr.nf/img/acdxc-amann3.jpg" />
+    <meta property="og:description" content="Decouvrez sur cette page nos Players Sociaux avec jamendo, fanburst, soundcloud, jwplayer, youtube..." />
+
+    <meta name="description" content="Decouvrez sur cette page nos Players Sociaux avec jamendo, fanburst, soundcloud, jwplayer, youtube...">
+    <meta name="author" content="oliv">
+    <meta name="keywords" content="AC D'X'C, ac d'x'c, ac d'xc, acd'xc, ACDXC, acdxc, Assez D'excès!, rock, patois, charentais, saintongeais, goulebenéze">
+
+    <title>AC D'X'C Assez D'excès! --- SOCIAL PLAYERS</title>
+    <link rel="icon"
+          type="image/png"
+          href="../img/acdxc-logo.png">
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/acdxc.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                  <!-- Menu  -->
+                  <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand page-scroll" href="../">
+                  <img alt="logo du groupe ac d'x'c" src="../img/acdxc-logo.png" style="width:80px"/>
+              </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="#!/jamendo">Jamendo</a>
+                  </li>
+                  <li>
+                      <a href="#!/fanburst">Fanburst</a>
+                  </li>
+                  <li>
+                      <a href="#!/soundcloud">SoundCloud</a>
+                  </li>
+                  <li>
+                      <a href="#!/jwplayer">JWPlayer</a>
+                  </li>
+                  <li>
+                      <a href="#!/youtube">YouTube</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+  <section class="container-fluid content-video text-center" style="padding-top: 55px;">
+      <div ng-view style="overflow:hidden" ></div>
+  </section>
+
+  <nav class="navbar navbar-custom navbar-fixed-bottom bottom-nav-collapse" >
+    <div class="container text-center">
+      <img alt="crabe logo du groupe" src="../img/acdxc-logo-crabe-copyright.png" style="width:50px"/>
+      <span class="badge"> &copy; 2017</span>
+      <img alt="crabe logo du groupe" src="../img/acdxc-logo-crabe-copyright.png" style="width:50px"/>
+    </div>
+  </nav>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="vendor/angular-route/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="viewjamendo/viewjamendo.js"></script>
+  <script src="viewfanburst/viewfanburst.js"></script>
+  <script src="viewsoundcloud/viewsoundcloud.js"></script>
+  <script src="viewjwplayer/viewjwplayer.js"></script>
+  <script src="viewyoutube/viewyoutube.js"></script>
+</body>
+</html>
