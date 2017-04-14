@@ -75,7 +75,7 @@ $(function() {
           }
 
           //GTM
-          dataLayer.push({'currentPlaying': songname, 'event': 'btn.click'});
+          dataLayer.push({'currentPlaying': songname, 'event': 'play.click'});
         }
     });
 
