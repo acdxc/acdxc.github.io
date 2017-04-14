@@ -246,8 +246,46 @@
                         <div class="modal-content">
 
                           <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">AC D'X'C PLAYER</h4>
+                            <!-- implement shema.org in header-->
+                            <div itemscope itemtype="http://schema.org/MusicAlbum" class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">
+                                    <span itemprop="byArtist">AC D'X'C</span> -
+                                    <span itemprop="name">"Assez D'excès!"</span>
+                                </h4>
+                                <div>
+                                  <img itemprop="image" alt="photo de couverture de l'album Assez D'excès!" src="img/acdxc-album0.jpg" style="width:100px; margin:10px"/>
+                                </div>
+                                <meta itemprop="numTracks" content="12"  />
+                                <meta content="Rock/Patois" itemprop="genre" />
+                                <div itemprop="track" itemscope itemtype="http://schema.org/ItemList">
+                                    <meta itemprop="numberOfItems" content=3 />
+                                    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                        <meta itemprop="position" content="1" />
+                                        <div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording">
+                                          <meta itemprop="name" content="Moncieu le Sous Peurfet" />
+                                          <meta itemprop="numTracks" content="5" />
+                                          <meta itemprop="duration" content="PT3M22S"  />
+                                        </div>
+                                    </div>
+                                    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                      <meta itemprop="position" content="2" />
+                                      <div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording">
+                                        <meta itemprop="name" content="Lyly" />
+                                        <meta itemprop="numTracks" content="6" />
+                                        <meta itemprop="duration" content="PT4M26S"  />
+                                      </div>
+                                    </div>
+                                    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                       <meta itemprop="position" content="3" />
+                                       <div itemprop="item" itemscope itemtype="http://schema.org/MusicRecording">
+                                        <meta itemprop="name" content="Ma Ville" />
+                                        <meta itemprop="numTracks" content="3" />
+                                        <meta itemprop="duration" content="PT4M34S"  />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End implement shema.org in header-->
                             <div class="modalPlayer" ></div>
                           </div>
 
