@@ -83,19 +83,17 @@
 
 /* youtube frame *******/
 .yt-frame {
-  width: 100%;
-  height: 80px;
+  width: 280px;
+  height: 157px;
 }
-@media (min-width: 430px) { .yt-frame { height: 100px; } }
-@media (min-width: 465px) { .yt-frame { height: 120px; } }
+@media (min-width: 465px) { .yt-frame { width: 455px; height: 256px; } }
 
-@media (min-width: 565px) { .yt-frame { height: 150px; } }
-@media (min-width: 670px) { .yt-frame { height: 180px; } }
-@media (min-width: 730px) { .yt-frame { height: 200px; } }
-
-@media (min-width: 768px) { .yt-frame { height: 211px; } }
-@media (min-width: 992px) {  .yt-frame { height: 256px; }  }
-@media (min-width: 1200px) { .yt-frame { height: 315px; } }
+/*****/
+.logo-btn-nav {
+  position:relative;
+  width:40px;
+}
+/*****/
 
 
 /* carousel *******/
@@ -104,14 +102,14 @@
   margin-left: auto;
   margin-right: auto;
 }
-.carousel-inner {
+.carousel:not(#carousel-album) .carousel-inner {
   /*width: 100%;*/
   height: 100px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
 }
-.carousel .item img{
+.carousel:not(#carousel-album) .item img{
   height: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -148,6 +146,13 @@
   }
 }
 
+/* panel Player *******/
+.panel{
+  background-color: black;
+}
+.panel.panel-trans{
+  opacity: 0.7;
+}
 
 /* modal Player *******/
 .modal-content{
@@ -192,6 +197,25 @@ li.playing:before {
   font-size: 13px;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
+
+.playIcon {
+  width: 14px;
+  height: 14px;
+  padding: 3px;
+  line-height: 14px;
+  margin: 0px;
+  position: absolute;
+  left: -30px;
+  top: 9px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+li .playIcon {
+  visibility: visible;
+}
+li.playing .playIcon {
+  visibility: hidden;
+}
+
 .playerListDownload {
   text-align:center;
   list-style: none;
@@ -535,6 +559,9 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
+@media (min-width: 768px) { .intro { padding: 160px 0px 100px 0px; } }
+@media (min-width: 992px) { .intro { padding: 100px 0; } }
+
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
@@ -625,6 +652,9 @@ a:focus {
   padding-top: 100px;
 }
 .content-section {
+  padding-top: 100px;
+}
+.content-section-album {
   padding-top: 100px;
 }
 .download-section {

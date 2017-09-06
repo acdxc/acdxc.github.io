@@ -10,8 +10,7 @@ $(function() {
   $('.wav').css('display', 'none');
   //$('.mp3').css('display', 'none');
 
-  //comportement du qualitySelector
-  $('input[name=qualityName]').on('change', function() {
+  var hideQuality = function() {
     $('.aac').css('visibility', 'hidden');
     $('.wav').css('visibility', 'hidden');
     $('.wav').css('visibility', 'hidden');
@@ -19,10 +18,28 @@ $(function() {
     $('.aac').css('display', 'none');
     $('.wav').css('display', 'none');
     $('.mp3').css('display', 'none');
+  };
 
-    var qualityName = $('input[name=qualityName]:checked').val();
+  //comportement du qualitySelector dans la panel - qualityName0
+  $('input[name=qualityName0]').on('change', function() {
+    var qualityName = $('input[name=qualityName0]:checked').val();
+
+    hideQuality();
     $('.' + qualityName).css('visibility', 'visible');
     $('.' + qualityName).css('display', 'block');
+
+    $("input[name=qualityName][value='"+qualityName+"']").prop("checked",true);
+  });
+
+  //comportement du qualitySelector dans la modal - qualityName
+  $('input[name=qualityName]').on('change', function() {
+    var qualityName = $('input[name=qualityName]:checked').val();
+
+    hideQuality();
+    $('.' + qualityName).css('visibility', 'visible');
+    $('.' + qualityName).css('display', 'block');
+
+    $("input[name=qualityName0][value='"+qualityName+"']").prop("checked",true);
   });
 
   /*** initialisation du MUSIC PLAYER => audiojs plugin ***/
@@ -60,7 +77,9 @@ $(function() {
           audio.playPause();
         } else {
           $('.playerList li').removeClass('playing');
-          $(this).addClass('playing'); //.siblings().removeClass('playing');
+          //check panel and modal the same time with current data-src
+          $(".playerList li a[data-src='"+current+"']").parent().addClass('playing');
+
           $('#playerText').html( ' playing '  + songname ); //+ current.substr(current.lastIndexOf('/')+1));
           $('.time').css('font-size', '12px');
 

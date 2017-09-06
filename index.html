@@ -82,16 +82,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about"><img alt="guitare AC D'X'C" src="img/acdxc-guitar-dessin.png" />
-                            <span style="position:relative;left:-30px">Groupe</span></a>
+                        <a class="page-scroll" href="#about"><img class="logo-btn-nav" alt="logo du groupe ac d'x'c" src="img/acdxc-logo.png" />
+                            <span>Album</span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download"><img alt="guitare AC D'X'C" src="img/acdxc-guitar-dessin.png" />
-                            <span style="position:relative;left:-30px">Music</span></a>
+                        <a class="page-scroll" href="#download"><img class="logo-btn-nav" alt="logo du groupe ac d'x'c" src="img/acdxc-logo.png" />
+                            <span>Music</span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact"><img alt="guitare AC D'X'C" src="img/acdxc-guitar-dessin.png" />
-                            <span style="position:relative;left:-30px">Contact</span></a>
+                        <a class="page-scroll" href="#contact"><img class="logo-btn-nav" alt="logo du groupe ac d'x'c" src="img/acdxc-logo.png" />
+                            <span>Contact</span></a>
                     </li>
                 </ul>
             </div>
@@ -102,73 +102,202 @@
 
     <!-- Intro Header -->
     <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">AC D'X'C</h1>
-                        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Facdxc.fr.nf&layout=button_count&size=large&mobile_iframe=true&width=89&height=20&appId" width="120" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                        <p class="intro-text">Groupe de rock cabane
-                          <br>Chants en patois charentais
-                        </p>
-                    </div>
+      <div class="intro-body">
+        <div class="container">
+          <h1 class="brand-heading">AC D'X'C</h1>
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Facdxc.fr.nf&layout=button_count&size=large&mobile_iframe=true&width=89&height=20&appId" width="120" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </br>Bienvenue sur acdxc.fr.nf
+          <p>Site officiel du groupe AC D'X'C (Assez D'Excès)</p>
+          <div class="row">
+            <div class="col-md-6" >
+              <iframe class="yt-frame" src="https://www.youtube.com/embed/OAq9Sq0mRTg?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-12 col-sm-6 col-xs-6" >
+                  <h2 class="intro-text">ROCK CABANE
+                  </br>CHANTS EN PATOIS CHARENTAIS
+                  </h2>
                 </div>
-                <!-- Effet ligth -->
-                <!-- <div class="scene">
-                  <div class="wrap">
-                      <div class="wall wall-right"></div>
-                      <div class="wall wall-left"></div>
-                      <div class="wall wall-top"></div>
-                      <div class="wall wall-bottom"></div>
-                      <div class="wall wall-back"></div>
+                <div class="col-md-12 col-sm-6 col-xs-6">
+                </br>
+                  <h2>ALBUM</br>
+                    <a href="#about" class="btn btn-circle page-scroll"><i class="fa fa-angle-double-down animated"></i></a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Panel -->
+          <div class="panel panel-trans">
+            <div class="panel-header">
+              </br>
+              <h3>Pour écouter ou télécharger</h3>
+            </div>
+            <div class="panel-body">
+              <p>1 - Choisissez votre qualité ici :
+              <div class="row" >
+                <div id="qualitySelector" >
+                  <div class="radio-inline">
+                    <label><input type="radio" name="qualityName0" value="mp3" checked>
+                      <div class="btn btn-default btn-xs qualityItem">MP3</div>
+                    </label>
                   </div>
-                  <div class="wrap">
-                      <div class="wall wall-right"></div>
-                      <div class="wall wall-left"></div>
-                      <div class="wall wall-top"></div>
-                      <div class="wall wall-bottom"></div>
-                      <div class="wall wall-back"></div>
+                  <div class="radio-inline">
+                    <label><input type="radio" name="qualityName0" value="wav">
+                      <div class="btn btn-default btn-xs qualityItem">WAV</div>
+                    </label>
                   </div>
-                </div> -->
+                  <div class="radio-inline">
+                    <label><input type="radio" name="qualityName0" value="aac" >
+                      <div class="btn btn-default btn-xs qualityItem">AAC</div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              </p>
+              <p>2 - Cliquez sur la chanson pour écouter ou le bouton pour télécharger</p>
+              <div class="row" >
+                <div class="col-xs-10 playerList" style="padding:0px">
+                  Ecouter
+                </div>
+                <div class="col-xs-2 playerListDownload" style="padding:0px">
+                  Télécharger
+                </div>
+              </div>
+              <div class="row" >
+                <!-- List songs name -->
+                <div class="col-xs-10" style="padding:0px">
+                  <!-- List mp3 on jamendo-->
+                  <ol class="playerList mp3">
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-mp32s"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Moncieu_le_Sous_Peurfet.mp3</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-mp32s"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Lyly.mp3</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-mp32s"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Ma_Ville.mp3</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/jvousencule-mp32s"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> J'Vous_Encule.mp3</a></li>
+                  </ol>
+                  <!-- List wav on fanburst-->
+                  <ol class="playerList wav">
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-wav"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Moncieu_le_Sous_Peurfet.wav</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-wav"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Lyly.wav</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-wav"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Ma_Ville.wav</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/jvousencule-wav"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> J'Vous_Encule.wav</a></li>
+                  </ol>
+                  <!-- List aac on jwplayer-->
+                  <ol class="playerList aac">
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-aac"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Moncieu_le_Sous_Peurfet.aac</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-aac"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Lyly.aac</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-aac"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Ma_Ville.aac</a></li>
+                    <li><a class="playerElem" href="#" data-src="http://bit.ly/jvousencule-aac"><i class="playIcon fa fa-play-circle-o fa-2x" aria-hidden="true"></i> J'Vous_Encule.aac</a></li>
+                  </ol>
+                  <!-- List mp3 on local server-->
+                  <!-- <ol class="playerList mp3">
+                    <li><a class="playerElem" href="#" data-src="music/Moncieu_le_Sous_Peurfet.mp3">Moncieu_le_Sous_Peurfet.mp3</a></li>
+                    <li><a class="playerElem" href="#" data-src="music/Lyly.mp3">Lyly.mp3</a></li>
+                    <li><a class="playerElem" href="#" data-src="music/Ma_Ville.mp3">Ma_Ville.mp3</a></li>
+                  </ol> -->
+                </div>
+                <!-- List Download -->
+                <div class="col-xs-2" style="padding:0px">
+                  <!-- List mp3 192kbps on jamendo-->
+                  <ul class="playerListDownload mp3">
+                    <li ><a class="btn-default playerElemDownload" href="http://bit.ly/peurfet-mp32"
+                      download="Moncieu_le_Sous_Peurfet.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 5.2 Mo</a></li>
+                    <li ><a class="btn-default playerElemDownload" href="http://bit.ly/lyly-mp32"
+                      download="Lyly.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 7 Mo</a></li>
+                    <li ><a class="btn-default playerElemDownload" href="http://bit.ly/maville-mp32"
+                      download="Ma_Ville.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 6.8 Mo</a></li>
+                    <li ><a class="btn-default playerElemDownload" href="http://bit.ly/jvousencule-mp32"
+                      download="J_Vous_Encule.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 4.2 Mo</a></li>
+                  </ul>
+                  <!-- List wav on fanburst -->
+                  <ul class="playerListDownload wav">
+                    <li><a class="btn-default playerElemDownload" href="http://bit.ly/peurfet-wav"
+                      download="Moncieu_le_Sous_Peurfet.wav" ><i class="fa fa-download" aria-hidden="true"></i> 35.8 Mo</a></li>
+                    <li><a class="btn-default playerElemDownload" href="http://bit.ly/lyly-wav"
+                      download="Lyly.wav" ><i class="fa fa-download" aria-hidden="true"></i> 47.1 Mo</a></li>
+                    <li><a class="btn-default playerElemDownload" href="http://bit.ly/maville-wav"
+                      download="Ma_Ville.wav" ><i class="fa fa-download" aria-hidden="true"></i> 48.5 Mo</a></li>
+                    <li ><a class="btn-default playerElemDownload" href="http://bit.ly/jvousencule-wav"
+                      download="J_Vous_Encule.wav" ><i class="fa fa-download" aria-hidden="true"></i> 29.5 Mo</a></li>
+                  </ul>
+                  <!-- List aac on jwplayer-->
+                  <ul class="playerListDownload aac">
+                    <li><a class="btn-default playerElemDownload" href="http://bit.ly/peurfet-aac"
+                      download="Moncieu_le_Sous_Peurfet.aac" ><i class="fa fa-download" aria-hidden="true"></i> 2.9 Mo</a></li>
+                    <li><a class="btn-default playerElemDownload" href="http://bit.ly/lyly-aac"
+                      download="Lyly.aac" ><i class="fa fa-download" aria-hidden="true"></i> 3.8 Mo</a></li>
+                    <li><a class="btn-default playerElemDownload" href="http://bit.ly/maville-aac"
+                      download="Ma_Ville.aac" ><i class="fa fa-download" aria-hidden="true"></i> 3.9 Mo</a></li>
+                    <li><a class="btn-default playerElemDownload" href="http://bit.ly/jvousencule-aac"
+                      download="J_Vous_Encule.aac" ><i class="fa fa-download" aria-hidden="true"></i> 2.4 Mo</a></li>
+                  </ul>
+                  <!-- List mp3 on local server-->
+                  <!-- <ul class="playerListDownload mp3">
+                    <li ><a class="btn-default playerElemDownload" href="./music/Moncieu_le_Sous_Peurfet.mp3"
+                      download="Moncieu_le_Sous_Peurfet.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 3.3 Mo</a></li>
+                    <li ><a class="btn-default playerElemDownload" href="./music/Lyly.mp3"
+                      download="Lyly.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 4.4 Mo</a></li>
+                    <li ><a class="btn-default playerElemDownload" href="./music/Ma_Ville.mp3"
+                      download="Ma_Ville.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 4.5 Mo</a></li>
+                    <li >Tous (zip)<a class="btn-default playerElemDownload" href="./music/acdxc-music-mp3.zip"
+                      download="acdxc-music-mp3.zip" ><i class="fa fa-download" aria-hidden="true"></i> 11.4 Mo</a></li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section-album text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
                 <!-- Carroussel -->
-                <div id="carousel-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div id="carousel-album" class="carousel slide" data-ride="carousel" data-interval="5000">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
                     <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-generic" data-slide-to="1"></li>
                     <li data-target="#carousel-generic" data-slide-to="2"></li>
                     <li data-target="#carousel-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-generic" data-slide-to="4"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                      <img src="img/acdxc-logo-crabe-carrou.png" alt="le crabe logo tout seul" >
+                      <img src="img/acdxc-album0.jpg" alt="le crabe logo tout seul" >
                       <div class="carousel-caption"></div>
                     </div>
                     <div class="item">
-                      <img src="img/assezdexces.png" alt="Assez D'excès! titre de l'album" >
+                      <img src="img/acdxc-album3.jpg" alt="le crabe logo tout seul" >
                       <div class="carousel-caption"></div>
                     </div>
                     <div class="item">
-                      <img src="img/guitar.png" alt="guitare decorée sur bois à la main" >
+                      <img src="img/acdxc-album5.jpg" alt="Assez D'excès! titre de l'album" >
                       <div class="carousel-caption"></div>
                     </div>
                     <div class="item">
-                      <img src="img/rockfort.png" alt="Assez D'excès! rock fort charentais" >
+                      <img src="img/acdxc-album4.jpg" alt="guitare decorée sur bois à la main" >
+                      <div class="carousel-caption"></div>
+                    </div>
+                    <div class="item">
+                      <img src="img/acdxc-album6.jpg" alt="Assez D'excès! rock fort charentais" >
                       <div class="carousel-caption"></div>
                     </div>
                   </div>
 
                   <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+                  <a class="left carousel-control" href="#carousel-album" role="button" data-slide="prev">
                     <img class="logo-btn-carousel" alt="logo du groupe ac d'x'c" src="img/acdxc-logo.png"/>
                     <div class="chevron-btn-carousel">
                       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     </div>
                     <span class="sr-only">Previous</span>
                   </a>
-                  <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+                  <a class="right carousel-control" href="#carousel-album" role="button" data-slide="next">
                     <img class="logo-btn-carousel" alt="logo du groupe ac d'x'c" src="img/acdxc-logo.png" />
                     <div class="chevron-btn-carousel">
                       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
@@ -177,42 +306,13 @@
                   </a>
 
                 </div>
-                <br>
-                <a href="#about" class="btn btn-circle page-scroll">
-                    <i class="fa fa-angle-double-down animated"></i>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <!--<div class="row">
-          <div class="col-xs-6">
-            <iframe class="yt-frame" src="https://www.youtube.com/embed/_l7rhZXp2xY" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="col-xs-6">
-            <iframe class="fb-frame"  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F691011287653960%2Fvideos%2F921679974587089%2F&show_text=0&width=560"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-          </div>
-        </div>-->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Le groupe</h2>
-                <img alt="dessin du groupe" src="img/acdxc5.jpg" style="width:100%"/>
-                <p><br>Le quatuor trembladais ACD'X'C est composé de musiciens d'une même famille. Laurent Héraudeau, au chant et à la guitare rythmique, est accompagné de sa compagne Lydia Charles à la basse, de son fils Yoahn Charles (remplacé depuis 2016 par Maxime Lalardrie) à la batterie et de son neveu, Arnaud Dareix, à la guitare solo.</p>
-
-                <img alt="photo du groupe avec Georges Amann" src="img/acdxc-album3.jpg" style="width:100%"/>
-                <p><br>Georges Amann (ancien journaliste et photographe rock) a reconnu le potentiel du groupe et leur a prodigué des conseils avisés afin qu'il trouve leur identité musicale. Ainsi, ces défenseurs du patrimoine charentais distillent, avec ferveur et passion, un « rock fort » survitaminé et mélodique, teinté d'une énergie punk rock.</p>
-
-                <img alt="photo du groupe à Bourcefranc" src="img/acdxc3.jpg" style="width:100%"/>
-                <p><br>En plus de leurs compositions personnelles, ils ont réussi avec brio à mettre en musique plusieurs textes en patois du célèbre poète barde Goulebenéze. L'album « Assez D'excès! », un opus 100 % charentais maritime, est un cocktail explosif et rageur qui vient de leur amour partagé pour le rock'n'roll. « Assez D'excès! » est à découvrir et à déguster sans modération !</p>
-
+              </br>
+                <h2>Assez D'Excès (ALBUM)</h2>
+                <p><br>L'album contient 12 titres et dure 58 minutes.</p>
                 <p>Paroles liés à l’histoire de l’ostréiculture et de la pêche.
                 <br>Paroles de Goulebenéze.</p>
-
-                <img alt="photo de couverture de l'album Assez D'excès!" src="img/acdxc-album0.jpg" style="width:100%"/>
-                <p><br>Leur album est en vente par correspondance (voir la page Facebook du groupe) et lors des futurs concerts en 2016-2017. L'album contient 12 titres et dure 58 minutes.</p>
-
+                <p>L'album est en vente au format CD uniquement.</br>
+                  Vous pouvez le commander par correspondance sur Facebook :</p>
                 <a href="https://fr-fr.facebook.com/commerce/products/1314988398533604/" target="_blank" class="btn btn-default btn-lg">
                   <img src="img/acdxc-btn.png" />
                   Album sur <i class="fa fa-facebook fa-fw"></i>
@@ -322,18 +422,21 @@
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-mp32s">Moncieu_le_Sous_Peurfet.mp3</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-mp32s">Lyly.mp3</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-mp32s">Ma_Ville.mp3</a></li>
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/jvousencule-mp32s"></i>J'Vous_Encule.mp3</a></li>
                                 </ol>
                                 <!-- List wav on fanburst-->
                                 <ol class="playerList wav">
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-wav" >Moncieu_le_Sous_Peurfet.wav</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-wav" >Lyly.wav</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-wav" >Ma_Ville.wav</a></li>
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/jvousencule-wav"></i> J'Vous_Encule.wav</a></li>
                                 </ol>
                                 <!-- List aac on jwplayer-->
                                 <ol class="playerList aac">
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/peurfet-aac" >Moncieu_le_Sous_Peurfet.aac</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/lyly-aac" >Lyly.aac</a></li>
                                   <li><a class="playerElem" href="#" data-src="http://bit.ly/maville-aac" >Ma_Ville.aac</a></li>
+                                  <li><a class="playerElem" href="#" data-src="http://bit.ly/jvousencule-aac" >J'Vous_Encule.aac</a></li>
                                 </ol>
                                 <!-- List mp3 on local server-->
                                 <!-- <ol class="playerList mp3">
@@ -352,8 +455,8 @@
                                     download="Lyly.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 7 Mo</a></li>
                                   <li ><a class="btn-default playerElemDownload" href="http://bit.ly/maville-mp32"
                                     download="Ma_Ville.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 6.8 Mo</a></li>
-                                  <li >Tous (zip)<a class="btn-default playerElemDownload" href="http://bit.ly/assezdexces-mp3"
-                                    download="acdxc-music-mp3.zip" ><i class="fa fa-download" aria-hidden="true"></i> 19 Mo</a></li>
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/jvousencule-mp32"
+                                    download="J_Vous_Encule.mp3" ><i class="fa fa-download" aria-hidden="true"></i> 4.2 Mo</a></li>
                                 </ul>
                                 <!-- List mp3 96kbs on jamendo-->
                                 <!-- <ul class="playerListDownload mp3">
@@ -374,8 +477,8 @@
                                     download="Lyly.wav" ><i class="fa fa-download" aria-hidden="true"></i> 47.1 Mo</a></li>
                                   <li><a class="btn-default playerElemDownload" href="http://bit.ly/maville-wav"
                                     download="Ma_Ville.wav" ><i class="fa fa-download" aria-hidden="true"></i> 48.5 Mo</a></li>
-                                  <li >Tous (zip)<a class="btn-default playerElemDownload" href="http://bit.ly/assezdexces-wav"
-                                    download="acdxc-music-wav.zip" ><i class="fa fa-download" aria-hidden="true"></i> 128 Mo</a></li>
+                                  <li ><a class="btn-default playerElemDownload" href="http://bit.ly/jvousencule-wav"
+                                    download="J_Vous_Encule.wav" ><i class="fa fa-download" aria-hidden="true"></i> 29.5 Mo</a></li>
                                 </ul>
                                 <!-- List aac on jwplayer-->
                                 <ul class="playerListDownload aac">
@@ -385,6 +488,8 @@
                                     download="Lyly.aac" ><i class="fa fa-download" aria-hidden="true"></i> 3.8 Mo</a></li>
                                   <li><a class="btn-default playerElemDownload" href="http://bit.ly/maville-aac"
                                     download="Ma_Ville.aac" ><i class="fa fa-download" aria-hidden="true"></i> 3.9 Mo</a></li>
+                                  <li><a class="btn-default playerElemDownload" href="http://bit.ly/jvousencule-aac"
+                                    download="J_Vous_Encule.aac" ><i class="fa fa-download" aria-hidden="true"></i> 2.4 Mo</a></li>
                                 </ul>
                                 <!-- List mp3 on local server-->
                                 <!-- <ul class="playerListDownload mp3">
@@ -497,9 +602,10 @@
           <p><img alt="groupe avec les lettres AC D'X'C" src="img/letterACDXC.jpg" style="width:100%"/></p>
           <p><br>
             <img alt="crabe logo du groupe" src="img/acdxc-logo-crabe-copyright.png" style="width:50px"/>
-            <span class="badge"> &copy; 2016-2017</span>
+            <span class="badge"> &copy; 2017</span>
             <img alt="crabe logo du groupe" src="img/acdxc-logo-crabe-copyright.png" style="width:50px"/>
           </p>
+          <a href="index2016.html">voir la version 2016</a>
         </div>
     </footer>
 
