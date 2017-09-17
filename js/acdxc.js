@@ -183,3 +183,33 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $(this).closest('.collapse').collapse('toggle');
 });
+
+//ekkoLightbox for photos albums
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+
+//API Graph de facebook for photos albums
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '1488047211287884',
+      version: 'v2.10' // or v2.1, v2.2, v2.3, ...
+    });
+    var thumbs = $('#thumbs');
+    FB.api('/923616837726736/photos', {fields: 'images', access_token:'1488047211287884|bb4a396785369c1216267485310e0394'}, function(response) {
+          var imgs = response.data;
+          for (var i = 0; i < imgs.length; i++) {
+            $('<a href="' + imgs[i].images[0].source + '" data-toggle="lightbox" data-gallery="fb-albums-gallery"><img src="' + imgs[i].images[7].source + '" class="img-fluid"></a>').appendTo(thumbs);
+          }
+    });
+    FB.api('/911085248979895/photos', {fields: 'images', access_token:'1488047211287884|bb4a396785369c1216267485310e0394'}, function(response) {
+          var imgs = response.data;
+          for (var i = 0; i < imgs.length; i++) {
+            $('<a href="' + imgs[i].images[0].source + '" data-toggle="lightbox" data-gallery="fb-albums-gallery"><img src="' + imgs[i].images[7].source + '" class="img-fluid"></a>').appendTo(thumbs);
+          }
+    });
+  });
+});
